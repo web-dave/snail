@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snail 🐌</title>
+  </head>
+  <body>
+    <div class="commands">
+      <button data-command="run" class="command run">Laufen</button>
+      <button data-command="left" class="command left">Drehen Links</button>
+      <button data-command="right" class="command right">
+        Drehen Nicht Links
+      </button>
+      <button class="play">Play</button>
+      <ol></ol>
+    </div>
+    <div id="app">
+      <canvas
+        id="myCanvas"
+        width="500"
+        height="500"
+        style="border: 1px solid #000000"
+      ></canvas>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
