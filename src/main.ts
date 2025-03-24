@@ -8,15 +8,13 @@ canvas.height = 600;
 document.body.appendChild(canvas);
 
 const commands: { command: "run" | "left" | "right"; value: number }[] = [];
-const cmdList = document.querySelector("ol");
+const cmdList = document.querySelector("ol") as HTMLOListElement;
 
 document
   .querySelector(".play")
   ?.addEventListener("click", () => replayCommands());
 
 document.querySelectorAll(".command").forEach((elem: Element) => {
-  // const cmd = elem.classList.toString().replace("command", "");
-
   const cmd = elem.getAttribute("data-command") as "run" | "left" | "right";
   console.log("cmd => ", cmd);
   elem.addEventListener("click", () => addCommand(cmd));
@@ -46,10 +44,6 @@ function addCommand(command: "run" | "left" | "right") {
     }
   }
   console.log(commands);
-}
-
-function turn(value: number) {
-  degrees += value;
 }
 
 const trail: { x: number; y: number }[] = [{ x, y }];
