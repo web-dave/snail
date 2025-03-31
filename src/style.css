@@ -82,6 +82,27 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.list-container {
+  max-height: 608px;
+}
+
+.list-container ul {
+  max-height: 550px;
+  overflow-x: scroll;
+}
+
+.sortable-list {
+  list-style: none;
+  padding: 0;
+  width: 300px;
+}
+.sortable-list li {
+  padding: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  cursor: grab;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

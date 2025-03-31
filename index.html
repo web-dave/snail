@@ -7,22 +7,39 @@
     <title>Snail 🐌</title>
   </head>
   <body>
-    <div class="commands">
-      <button data-command="run" class="command run">Laufen</button>
-      <button data-command="left" class="command left">Drehen Links</button>
-      <button data-command="right" class="command right">
-        Drehen Nicht Links
-      </button>
-      <button class="play">Play</button>
-      <ol></ol>
-    </div>
     <div id="app">
-      <canvas
-        id="myCanvas"
-        width="500"
-        height="500"
-        style="border: 1px solid #000000"
-      ></canvas>
+      <header style="padding: 10px; text-align: center">
+        <h1>Welcome to Snail 🐌</h1>
+        <p>Control the snail and explore the canvas!</p>
+        <div style="display: flex; gap: 20px">
+          <button data-command="run" class="command run">Laufen</button>
+          <button data-command="left" class="command left">Drehen Links</button>
+          <button data-command="right" class="command right">
+            Drehen Nicht Links
+          </button>
+          <button class="play">Play</button>
+        </div>
+      </header>
+      <div class="ui-container" style="display: flex; gap: 20px">
+        <div
+          class="list-container"
+          style="flex: 1; border: 1px solid #ccc; padding: 10px"
+        >
+          <h3>Liste</h3>
+          <ul id="sortable-list" class="sortable-list"></ul>
+        </div>
+        <div
+          class="details-container"
+          style="flex: 2; border: 1px solid #ccc; padding: 10px"
+        >
+          <canvas
+            id="myCanvas"
+            width="500"
+            height="500"
+            style="border: 1px solid #000000"
+          ></canvas>
+        </div>
+      </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
